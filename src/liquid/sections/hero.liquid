@@ -1,17 +1,27 @@
-{% render 'hero' %}
+{% render 'hero' with {
+    settings:section.settings
+} %}
 
 {% schema%}
     {
         "name":"Hero",
-        "settings":[{
-            "type":"header",
-            "content":"Hero"
-        }
+        "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label":"heading",
+            "default":"New heading"
         
-        ],
-        "presets":[{
+        
+        
+        } 
+    ],
+        "presets":[
+        {
             "name":"Hero",
             "category":"Image w/ text"
-        }]
+        }
+        
+        ]
     }
 {% endschema%}
